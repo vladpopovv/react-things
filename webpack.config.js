@@ -1,31 +1,29 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.jsx',
+  entry: ['./src/app.jsx', './src/scss/main.scss'],
   output: {
     path: path.resolve(__dirname, './public'),
     publicPath: '/',
     filename: 'bundle.js',
   },
+  // output: {
+  //   filename: 'dist/bundle.js'
+  // },
   devServer: {
     historyApiFallback: true,
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html',
-  })],
   module: {
     rules: [
       // SCSS
       {
         test: /\.scss$/,
-        use: [{
-          loader: 'style-loader', // creates style nodes from JS strings
-        }, {
-          loader: 'css-loader', // translates CSS into CommonJS
-        }, {
-          loader: 'sass-loader', // compiles SCSS to CSS
-        }],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       },
       // JSX
       {
@@ -57,4 +55,10 @@ module.exports = {
       Redusers: path.resolve(__dirname, 'src/redusers'),
     },
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new ExtractTextPlugin('app.css'),
+  ],
 };
