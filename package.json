@@ -1,0 +1,19 @@
+{
+  "name": "react-things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladpopovv/react-things.git"
+  },
+  "author": "Vlad Popov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladpopovv/react-things/issues"
+  },
+  "homepage": "https://github.com/vladpopovv/react-things#readme"
+}
