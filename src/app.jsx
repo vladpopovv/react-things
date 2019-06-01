@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import createStore from './store/createStore';
 import history from './history';
+import Sidebar from './components/sidebar';
 
 const store = createStore();
 
 ReactDom.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
+      <Sidebar />
       <h1>Hello, world!</h1>
     </ConnectedRouter>
   </Provider>,

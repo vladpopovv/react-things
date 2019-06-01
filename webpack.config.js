@@ -54,7 +54,9 @@ module.exports = {
       '.js',
     ],
     alias: {
-      Redusers: path.resolve(__dirname, 'src/redusers'),
+      '@': path.resolve(__dirname, '/src/'),
+      constants: path.resolve(__dirname, 'src/constants/'),
+      actions: path.resolve(__dirname, 'src/actions/'),
     },
   },
   plugins: [
