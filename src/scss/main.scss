@@ -1,5 +1,14 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-div {
-  display: inline-block;
+@import './vars.scss';
+@import './sidebar.scss';
+
+.root-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
 }

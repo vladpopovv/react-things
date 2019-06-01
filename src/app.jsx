@@ -11,8 +11,10 @@ const store = createStore();
 ReactDom.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Sidebar />
-      <h1>Hello, world!</h1>
+      <div className="root-container">
+        <Sidebar />
+        <h1>Hello, world!</h1>
+      </div>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('app'),
