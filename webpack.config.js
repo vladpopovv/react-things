@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: ['./src/app.jsx', './src/scss/main.scss'],
@@ -14,6 +15,7 @@ module.exports = {
   // },
   devServer: {
     historyApiFallback: true,
+    port: 3000,
   },
   module: {
     rules: [
@@ -22,8 +24,8 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+          use: ['css-loader', 'sass-loader'],
+        }),
       },
       // JSX
       {
@@ -33,8 +35,8 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/env', '@babel/react']
-          }
-        }
+          },
+        },
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -60,5 +62,9 @@ module.exports = {
       template: './src/index.html',
     }),
     new ExtractTextPlugin('app.css'),
+    new CompressionPlugin({
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+    }),
   ],
 };

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/vladpopovv/react-things#readme",
   "dependencies": {
+    "connected-react-router": "^6.4.0",
+    "history": "^4.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -36,6 +38,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
