@@ -1,4 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 
 @import './vars.scss';
 @import './sidebar.scss';
@@ -11,4 +12,11 @@
   justify-content: center;
 
   min-height: 100vh;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-title {
+  font-weight: 200;
+  font-size: 64px;
 }

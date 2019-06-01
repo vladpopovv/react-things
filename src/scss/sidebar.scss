@@ -27,6 +27,8 @@ $size-toggle: 35px;
     right: 0;
 
     z-index: 90;
+
+    display: none;
   }
 
   .sidebar-toggle {
@@ -120,5 +122,16 @@ $size-toggle: 35px;
     .sidebar-toggle {
       transform: translateX(100%) rotate(180deg);
     }
+
+    .sidebar-overlay {
+      display: block;
+    }
   }
+}
+
+.bgr {
+  background: inherit;
+ width: 250px;
+ height: 350px;
+ position: absolute;
 }
