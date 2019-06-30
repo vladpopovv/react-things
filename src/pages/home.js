@@ -5,7 +5,7 @@ function Home() {
     <div className="home">
       <div className="home__image">
         {/* TODO: Add assets folder for images */}
-        <img alt="dinosaur" src="http://googledino.ru/assets/googe_dino.png" />
+        <img alt="dinosaur" src="https://lh3.googleusercontent.com/jq1i1nFKtLmxQI70ss58AfAwZi0Ef44ie62bthVndVBeHrPL04Ea46560tm-Pdki7phe" />
       </div>
       <h1 className="home__title">
         No internet
