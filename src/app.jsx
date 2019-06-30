@@ -14,8 +14,12 @@ ReactDom.render(
     <ConnectedRouter history={history}>
       <div className="root-container">
         <Sidebar>
-          <nav>
-            <Link href="/" to="/">
+          <nav className="sidebar__menu">
+            <Link
+              className="sidebar__menu-item"
+              href="/"
+              to="/"
+            >
               Main page
             </Link>
           </nav>

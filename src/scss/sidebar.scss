@@ -2,8 +2,7 @@ $offset-line-toogle: 12px;
 $size-toggle: 35px;
 
 .sidebar {
-
-  .sidebar-body {
+  .sidebar__body {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -14,12 +13,12 @@ $size-toggle: 35px;
 
     width: 300px;
 
-    background-color: #6a6a6a94;
+    background-color: rgba(0, 0, 0, .3);
 
     transition: $transition;
   }
 
-  .sidebar-overlay {
+  .sidebar__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +30,7 @@ $size-toggle: 35px;
     display: none;
   }
 
-  .sidebar-toggle {
+  .sidebar__toggle {
     position: absolute;
     top: 15px;
     right: -15px;
@@ -115,16 +114,37 @@ $size-toggle: 35px;
   }
 
   &.sidebar--open {
-    .sidebar-body {
+    .sidebar__body {
       transform: translateX(0);
     }
 
-    .sidebar-toggle {
+    .sidebar__toggle {
       transform: translateX(100%) rotate(180deg);
     }
 
-    .sidebar-overlay {
+    .sidebar__overlay {
       display: block;
+    }
+  }
+
+  .sidebar__menu {
+    display: block;
+    width: 100%;
+  }
+
+  .sidebar__menu-item {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+    color: #fff;
+
+    transition: .3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .4);
+
+      text-decoration: none;
     }
   }
 }

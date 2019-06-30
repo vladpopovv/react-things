@@ -33,15 +33,15 @@ class Sidebar extends React.Component {
     return (
       <div className={classNames('sidebar', { 'sidebar--open': isOpen })}>
         <div
-          className="sidebar-overlay"
+          className="sidebar__overlay"
           onClick={this.closeSidebar}
           onKeyDown={this.closeSidebar}
           role="button"
           tabIndex="0"
         />
-        <div className="sidebar-body">
+        <div className="sidebar__body">
           <button
-            className="sidebar-toggle"
+            className="sidebar__toggle"
             onClick={() => toogleSidebar(!isOpen)}
             type="button"
           >
