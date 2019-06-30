@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { Link } from 'react-router-dom';
+import { Link, Route} from 'react-router-dom';
 import createStore from './store/createStore';
 import history from './history';
+import Home from './pages/home';
 import Sidebar from './components/sidebar';
 
 const store = createStore();
@@ -24,7 +25,7 @@ ReactDom.render(
             </Link>
           </nav>
         </Sidebar>
-        <h1 className="main-title">Hello, I'm Vlad!</h1>
+        <Route path="/" component={Home} />
       </div>
     </ConnectedRouter>
   </Provider>,
