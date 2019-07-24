@@ -1,0 +1,14 @@
+.builder {
+  position: relative;
+
+  .element {
+    position: absolute;
+
+    width: 150px;
+    min-height: 50px;
+
+    border: 1px solid gray;
+
+    background: #fff;
+  }
+}

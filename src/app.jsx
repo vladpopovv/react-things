@@ -6,6 +6,7 @@ import { Link, Route} from 'react-router-dom';
 import createStore from './store/createStore';
 import history from './history';
 import Home from './pages/home';
+import DragAndDropExample from './pages/dragAndDropExample';
 import Sidebar from './components/sidebar';
 
 const store = createStore();
@@ -23,9 +24,17 @@ ReactDom.render(
             >
               Main page
             </Link>
+            <Link
+              className="sidebar__menu-item"
+              href="/drag-and-drop"
+              to="/drag-and-drop"
+            >
+              Drag & Drop Example
+            </Link>
           </nav>
         </Sidebar>
-        <Route path="/" component={Home} />
+        <Route path="/" exact component={Home} />
+        <Route path="/drag-and-drop" component={DragAndDropExample} />
       </div>
     </ConnectedRouter>
   </Provider>,
